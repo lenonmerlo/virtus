@@ -5,8 +5,8 @@ const translations = {
     hero_title_line1: "Inteligência e segurança",
     hero_title_line2: "para multiplicar seu patrimônio.",
     hero_body:
-      "Uma empresa fundada por Maria Gurgel, com soluções financeiras inovadoras e confiáveis para pessoas e empresas que desejam crescer com propósito.",
-    hero_cta: "Conheça Maria Gurgel",
+      "Uma empresa fundada por Maira Gurgel, com soluções financeiras inovadoras e confiáveis para pessoas e empresas que desejam crescer com propósito.",
+    hero_cta: "Conheça Maira Gurgel",
     hero_cta_secondary: "Ir para contato",
 
     about_lead:
@@ -68,8 +68,8 @@ const translations = {
     hero_title_line1: "Intelligence and security",
     hero_title_line2: "to grow your wealth.",
     hero_body:
-      "A company founded by Maria Gurgel, delivering innovative and reliable financial solutions for people and businesses that want to grow with purpose.",
-    hero_cta: "Meet Maria Gurgel",
+      "A company founded by Maira Gurgel, delivering innovative and reliable financial solutions for people and businesses that want to grow with purpose.",
+    hero_cta: "Meet Maira Gurgel",
     hero_cta_secondary: "Go to contact",
 
     about_lead:
