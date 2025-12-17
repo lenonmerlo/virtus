@@ -28,7 +28,7 @@ const translations = {
         body: "Liquidez imediata para investir, quitar dívidas ou alavancar seu patrimônio com segurança.",
       },
       {
-        title: "Seguro de Vida Inteligente",
+        title: "Blindagem Pessoal e Patrimonial",
         body: "Proteção adaptada ao seu estilo de vida. Tranquilidade para quem você ama e para seu futuro.",
       },
       {
@@ -91,7 +91,7 @@ const translations = {
         body: "Immediate liquidity to invest, pay off debt, or leverage your wealth with security.",
       },
       {
-        title: "Smart Life Insurance",
+        title: "Personal and Wealth Protection",
         body: "Protection tailored to your lifestyle. Peace of mind for those you love and for your future.",
       },
       {
