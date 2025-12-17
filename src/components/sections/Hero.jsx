@@ -29,7 +29,7 @@ export default function Hero() {
           <p className="hero__text">{t("hero_body")}</p>
 
           <div className="hero__ctaRow">
-            <Button variant="outline">{t("hero_cta")}</Button>
+            <Button href="https://www.mairagurgel.com.br/" target="_blank" rel="noopener noreferrer" variant="outline">{t("hero_cta")}</Button>
             <a className="btn btn--outline" href="#contato">
               {t("hero_cta_secondary")}
             </a>
