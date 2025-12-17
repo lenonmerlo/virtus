@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400&family=Inter:wght@300;400;500&display=swap");
+
+:root {
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.78);
+  --text-dark: #181818;
+
+  --brown: #813820;
+  --cream: #e8e0d6;
+
+  --radius-btn: 25px;
+
+  /* Seu layout foi desenhado em 1928px */
+  --frame: 1928px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Container tipo “Maira”, mas respeitando teu frame */
+.container {
+  width: min(var(--frame), calc(100% - 48px));
+  margin: 0 auto;
+  position: relative;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: var(--radius-btn);
+  font-size: 12px;
+  line-height: 1;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.btn--outline {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  color: var(--text-light);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.btn--outline:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.btn__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Language toggle (inline row) */
+.lang-toggle {
+  position: static;
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  z-index: 20;
+}
+
+.lang-toggle__btn {
+  min-width: 42px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.lang-toggle__btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.lang-toggle__btn.is-active {
+  background: var(--brown);
+  color: #fff;
+}
+
+/* =========================
+   HERO (Sessão 1) 1928x771
+========================= */
+.hero {
+  position: relative;
+  height: 771px;
+  width: 100%;
+  overflow: hidden;
+  background-color: red;
+  color: var(--text-light);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  /* transform: scale(1.02); */
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.25) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Frame do Hero (pra manter controle visual igual Figma) */
+.hero__frame {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.hero__topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Conteúdo posicionado com suas medidas */
+.hero__content {
+  /* position: absolute;
+  top: 86px;
+  left: 1057px;
+  width: 542px;  */
+}
+
+.hero__logo {
+  width: 331px;
+  height: 68px;
+  opacity: 0.95;
+}
+
+.hero__title {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1.12;
+  margin: 58px 0 35px; /* top do título relativo à logo + margin bottom pro parágrafo */
+  width: 542px;
+}
+
+.hero__text {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+  width: 483px; /* container texto */
+}
+
+.hero__ctaRow {
+  margin-top: 26px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* =========================
+   ABOUT (Sessão 2) 1931x640
+========================= */
+.about {
+  position: relative;
+  height: 640px;
+  overflow: hidden; /* pra cortar um dos vetores como no print */
+  color: var(--text-light);
+}
+
+.about__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.01);
+}
+
+.about__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Vetores */
+.about__vector {
+  position: absolute;
+  width: 743px;
+  height: 639px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.95;
+}
+
+.about__vector--1 {
+  left: -140px; /* deixa “só um pedaço” aparecendo */
+  top: 0px;
+}
+
+.about__vector--2 {
+  left: -20px;
+  top: 0px;
+  opacity: 0.6;
+}
+
+/* Conteúdo */
+.about__frame {
+  height: 640px;
+  position: relative;
+}
+
+/* “Bolha” alinhada com teus espaçamentos */
+.about__bubble {
+  position: absolute;
+  top: 225px;
+  left: 210px; /* ajuste fino pro texto cair dentro da área do vetor */
+  width: 418px; /* container do texto */
+}
+
+.about__lead {
+  margin: 0 0 12px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.about__p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.about__btnWrap {
+  margin-top: 29px;
+}
+
+.about .btn {
+  width: 256px;
+  height: 38px;
+  border-radius: 25px;
+  padding: 0;
+}
+
+/* =========================
+   SERVICES (Sessão 3)
+========================= */
+.services {
+  background: #e9cfcf;
+  padding: 0;
+}
+
+/* Grid: esquerda 756px, gap 95px, direita flex */
+.services__frame {
+  /* display: grid;
+  grid-template-columns: 756px 1fr;
+  gap: 95px;
+  align-items: start; */
+  gap: 32px;
+  display: flex;
+  padding: 0;
+}
+
+/* Lado esquerdo (foto 756x1028) */
+.services__left {
+  position: relative;
+  width: 756px;
+  height: 1028px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.services__leftOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.services__brand {
+  position: absolute;
+  left: 70px;
+  bottom: 120px;
+  z-index: 2;
+}
+
+.services__miniLogo {
+  width: 170px;
+  opacity: 0.95;
+  margin-bottom: 14px;
+}
+
+.services__bigTitle {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 0.95;
+  margin: 0;
+  color: #fff;
+}
+
+/* Lado direito */
+.services__right {
+  padding: 90px 0;
+  max-width: 760px;
+}
+
+.services__headline {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 32px;
+  color: var(--brown);
+  width: 759px; /* container titulo */
+  max-width: 100%;
+}
+
+.services__list {
+  width: 756px; /* container lista */
+  max-width: 100%;
+  display: grid;
+  gap: 18px;
+}
+
+.services__item strong {
+  /* display: block; */
+  font-size: 22px;
+  color: #1b1b1b;
+  margin-bottom: 4px;
+}
+
+.services__item p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #181818;
+}
+
+/* =========================
+   WHY (Sessão 4)
+========================= */
+.why {
+  background: var(--brown);
+  padding: 72px 0 143px;
+}
+
+.why__frame {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: start;
+  padding-left: clamp(24px, 5vw, 120px);
+  padding-right: clamp(24px, 5vw, 120px);
+}
+
+/* Pra não quebrar em telas menores */
+@media (min-width: 1600px) {
+  .why__frame {
+    padding-left: clamp(120px, 8vw, 357px);
+    padding-right: clamp(120px, 8vw, 357px);
+  }
+}
+
+.why__title {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1.12;
+  margin: 0;
+  color: var(--cream);
+}
+
+.why__list {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: rgba(232, 224, 214, 0.92);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.55;
+}
+
+/* =========================
+   CTA (Sessão 5)
+========================= */
+.cta {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  color: var(--text-light);
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.01);
+}
+
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.cta__frame {
+  min-height: 760px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta__content {
+  /* display: flex; */
+  /* position: absolute;
+  top: 190px;
+  left: 970px;
+  max-width: 520px; */
+  max-width: 40%;
+}
+
+.cta__title {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1.12;
+  margin: 0 0 18px;
+}
+
+.cta__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 26px;
+}
+
+.cta__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: max-content;
+}
+
+.cta__linksTitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+
+.cta__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #f6e7e6;
+  padding: 34px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 220px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.footer__note {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: rgba(24, 24, 24, 0.8);
+}
+
+/* =========================
+   RESPONSIVE (mínimo decente)
+========================= */
+@media (max-width: 1100px) {
+  .hero {
+    height: auto;
+    min-height: 720px;
+  }
+
+  .hero__frame {
+    position: relative;
+    flex-direction: column;
+    padding: 32px 20px 72px;
+  }
+
+  .hero__topBar {
+    width: 100%;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lang-toggle {
+    align-self: flex-start;
+  }
+
+  .hero__logo {
+    width: 220px;
+    height: auto;
+  }
+
+  .hero__title {
+    width: 100%;
+    font-size: 34px;
+    margin: 32px 0 18px;
+  }
+
+  .hero__text {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero__ctaRow {
+    width: 100%;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .about {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .about__frame {
+    height: auto;
+  }
+
+  .about__bubble {
+    position: static;
+    width: 100%;
+    max-width: 520px;
+    padding: 0 4px;
+  }
+
+  .services {
+    padding: 32px 0 48px;
+  }
+
+  .services__frame {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .services__left {
+    width: 100%;
+    height: 420px;
+  }
+
+  .services__right {
+    padding: 24px 0 64px;
+  }
+
+  .cta {
+    min-height: auto;
+    padding: 64px 0 72px;
+  }
+
+  .cta__frame {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .cta__content {
+    max-width: 100%;
+  }
+
+  .cta__title {
+    font-size: 32px;
+  }
+
+  .cta__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .cta__links {
+    width: 100%;
+  }
+
+  .cta__actions {
+    width: 100%;
+  }
+
+  .cta__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .why__frame {
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+}
