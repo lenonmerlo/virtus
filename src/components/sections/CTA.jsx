@@ -45,7 +45,7 @@ export default function CTA() {
               </a>
               <a
                 className="btn btn--outline"
-                href="https://linkedin.com/in/mairagurgel"
+                href="https://linkedin.com/in/maíragurgel"
                 target="_blank"
                 rel="noreferrer"
               >
